@@ -6,6 +6,7 @@
   src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
   font-family: 'Lato';
@@ -14,6 +15,7 @@
   src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
@@ -22,6 +24,7 @@
   src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
   font-family: 'Lato';
@@ -30,6 +33,7 @@
   src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
@@ -38,6 +42,7 @@
   src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
   font-family: 'Lato';
@@ -46,6 +51,7 @@
   src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
@@ -54,6 +60,7 @@
   src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
   font-family: 'Lato';
@@ -63,73 +70,299 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+:root {
+  --text: #25282c;
+  --muted: #646b73;
+  --link: #1772d0;
+  --link-hover: #bb5a12;
+  --rule: #dde3ea;
+  --soft: #f6f8fa;
+  --accent: #175c63;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #ffffff;
+}
+
+body {
+  color: var(--text);
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.58;
+  margin: 0;
+}
+
 a {
-  color: #1772d0;
+  color: var(--link);
   text-decoration: none;
 }
 
 a:focus,
 a:hover {
-  color: #f09228;
-  text-decoration: none;
+  color: var(--link-hover);
+  text-decoration: underline;
 }
 
-body,
-td,
-th,
-tr,
+.page {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 36px 28px 20px;
+}
+
+section {
+  border-top: 1px solid var(--rule);
+  padding: 28px 0;
+}
+
+.intro {
+  align-items: center;
+  border-top: 0;
+  display: grid;
+  gap: 36px;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  padding-top: 10px;
+}
+
+h1,
+h2,
+h3,
 p,
-a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+ul {
+  margin-top: 0;
 }
 
-strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+h1 {
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 h2 {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 25px;
-  margin: 0%;
+  color: #1d2329;
+  font-size: 23px;
+  line-height: 1.25;
+  margin-bottom: 14px;
 }
 
-.papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+h3 {
+  color: #1f2a33;
+  font-size: 16px;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+
+p {
+  margin-bottom: 12px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.portrait-wrap {
+  justify-self: center;
+}
+
+.portrait {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+  object-position: center 35%;
+  width: min(250px, 100%);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.links a,
+.paper-links a {
+  border-bottom: 1px solid rgba(23, 114, 208, 0.25);
   font-weight: 700;
 }
 
-.name {
-  padding-top: 20px;
-  margin: 0;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
+.news-list {
+  list-style: none;
+  padding-left: 0;
 }
 
-.one {
-  width: 160px;
-  height: 160px;
-  position: relative;
+.news-list li {
+  border-left: 3px solid var(--rule);
+  padding-left: 12px;
 }
 
-.two {
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+.research-grid,
+.personal-grid,
+.two-column {
+  display: grid;
+  gap: 18px;
 }
 
-.fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+.research-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 18px 0;
 }
 
-span.highlight {
-  background-color: #ffffd0;
+.research-grid article,
+.timeline article {
+  background: var(--soft);
+  border: 1px solid #e8edf2;
+  border-radius: 8px;
+  padding: 14px 16px;
 }
 
+.publication {
+  align-items: start;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 220px minmax(0, 1fr);
+  padding: 22px 0;
+}
+
+.publication + .publication {
+  border-top: 1px solid #edf1f4;
+}
+
+.publication.no-thumb {
+  grid-template-columns: minmax(0, 1fr);
+  padding: 15px 0;
+}
+
+.publication-media {
+  align-items: center;
+  background: var(--soft);
+  border: 1px solid #e5ebf0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  min-height: 130px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.publication-media img {
+  display: block;
+  max-height: 150px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.publication h3 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.authors,
+.venue,
+.note {
+  color: var(--muted);
+}
+
+.venue {
+  font-style: italic;
+}
+
+.paper-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+}
+
+.compact-publications {
+  padding-left: 18px;
+}
+
+.compact-publications li {
+  margin-bottom: 13px;
+}
+
+.compact-publications a + a {
+  margin-left: 8px;
+}
+
+.timeline {
+  display: grid;
+  gap: 12px;
+}
+
+.timeline p:last-child,
+.publication p:last-child,
+.personal-grid p:last-child,
+.research-grid p:last-child {
+  margin-bottom: 0;
+}
+
+.personal-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.personal-grid article {
+  border-left: 3px solid var(--accent);
+  padding-left: 14px;
+}
+
+.two-column {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+footer {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 10px 28px 34px;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 760px) {
+  .page {
+    padding: 22px 18px 12px;
+  }
+
+  .intro,
+  .publication,
+  .research-grid,
+  .personal-grid,
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait-wrap {
+    grid-row: 1;
+  }
+
+  .portrait {
+    width: 190px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+  .publication-media {
+    min-height: auto;
+  }
+}

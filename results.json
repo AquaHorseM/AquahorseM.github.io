@@ -1,0 +1,10 @@
+{
+  "task": "Implement 2026 refresh of Qinwei Ma static academic homepage",
+  "metrics": {
+    "missing_local_refs": 0,
+    "htmlparser_ok": 1,
+    "content_assertions_passed": 7,
+    "browser_render_checked": 0
+  },
+  "notes": "Updated identity, research narrative, news, selected and other publications, experience, personal sections, footer, responsive CSS, and worker documentation. CV PDF was not modified. Browser rendering could not be inspected because no browser binary was installed."
+}
