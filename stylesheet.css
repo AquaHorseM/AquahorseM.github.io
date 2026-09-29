@@ -262,6 +262,29 @@ li {
   object-fit: contain;
 }
 
+.publication-media.heatmap-card {
+  flex-direction: column;
+  gap: 7px;
+  margin: 0;
+  padding: 8px;
+}
+
+.publication-media.heatmap-card img {
+  max-height: 105px;
+}
+
+.heatmap-card figcaption {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.heatmap-card figcaption strong,
+.heatmap-card figcaption span {
+  display: block;
+}
+
 .publication h3 {
   font-size: 15px;
   font-weight: 700;
